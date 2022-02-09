@@ -17,7 +17,7 @@ module.exports = {
       .setTitle(i18n.__mf("help.embedTitle", { botname: message.client.user.username }))
       .setThumbnail(message.client.user.displayAvatarURL({ format: "png" }))
       .setDescription(i18n.__("help.embedDescription"))
-      .setColor("RANDOM")
+      .setColor("BLUE")
       .setFooter(`Requested by ${message.author.username}`);
 
     commands.forEach((cmd) => {
@@ -27,7 +27,7 @@ module.exports = {
         true
       );
     });
-    helpEmbed.addField(`**Links!**`, `**[Support Server](${support_server || "https://discord.gg/HMEKZdEExZ"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=70282305&scope=bot)**`)
+    helpEmbed.addField(`**Links!**`, `**[Website](https://www.mknetwork.cf) • [Vote](https://vote.mknetwork.cf)**`)
 
     helpEmbed.setTimestamp();
 
